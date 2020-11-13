@@ -88,3 +88,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * });
  * ```
  */
+$routes->prefix('api', function (RouteBuilder $routes) {
+	$routes->setExtensions(['json']);
+    $routes->resources('Contacts');
+    $routes->resources('Companies');
+});
